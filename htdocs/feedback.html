@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <noscript><meta http-equiv="refresh" content="0; url=http://cropit.rf.gd/noscript.html" /></noscript>
+        <title>CropIt: Image Resizer</title>
+        <meta name="description" content="Welcome to CropIt: Image Resizer. A website, dedicated to students filling online competitive exam forms.">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <style>
+        body { 
+            height: 100%; 
+            padding-top: 70px; 
+            background-color: #333;
+        }
+        .gap { 
+            margin-top: 45px; 
+        }
+        .text-muted {
+            color: #fff; 
+            margin-top: 15px; 
+            font-size: 120%; 
+        }
+        .text-muted a{ 
+            color: #fff;
+        }
+        </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html">CropIt</a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.html">Both</a></li>
+                        <li><a href="photo.html">Photo</a></li>
+                        <li><a href="sign.html">Sign</a></li>
+                    </ul> 
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="active"><a href="feedback.html">Feedback</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="well">Have a question or comment? Fill out the following information and we will get back to you as soon as possible.</div>
+            <form class="form-horizontal" action="feedback.php" method="post" role="form">
+                <div class="form-group">
+                    <label for="email" class="col-sm-2 control-label">E-mail</label>
+                    <div class="col-sm-4">
+                        <input type="email" class="form-control" id="email" name="email" placeholder="E-mail Address" required autofocus>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="subject" class="col-sm-2 control-label">Subject</label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="name" class="col-sm-2 control-label">Message</label>
+                    <div class="col-sm-6">
+                        <textarea id="message" name="message" class="form-control" placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-6">
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="gap"></gap>
+        <nav class="navbar navbar-inverse navbar-fixed-bottom">
+            <div class="f">
+		<p class="text-muted text-center">Copyright &copy; 2016-<script>document.write((new Date()).getFullYear())</script> <a href="mailto:lalitmunne9@gmail.com">Lalit Munne</a></p>
+            </div>
+        </nav>
+        <script>
+            if ($(document).height() > $(window).height()){
+                $(".gap").append($(".f"));
+                $(".f").addClass('navbar navbar-inverse');
+                $(".f").css("marginBottom","0px");
+                $(".navbar-fixed-bottom").css('display','none');
+            }
+        </script>
+        <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-88916663-1', 'auto');
+        ga('send', 'pageview');
+        </script>
+    </body>
+</html>

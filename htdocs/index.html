@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<noscript><meta http-equiv="refresh" content="0; url=http://cropit.rf.gd/noscript.html" /></noscript>
+		<title>CropIt: Image Resizer</title>
+		<meta name="description" content="Welcome to CropIt: Image Resizer. A website, dedicated to students filling online competitive exam forms.">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="styles.css">
+	</head>
+
+	<body>
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#">CropIt</a>
+				</div>
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+					<li class="active"><a href="index.html">Both</a></li>
+					<li><a href="photo.html">Photo</a></li>
+					<li><a href="sign.html">Sign</a></li>
+					</ul> 
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="feedback.html">Feedback</a></li>
+						<li><a href="about.html">About Us</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<div class="container">
+			<form enctype="multipart/form-data" action="cropit.php" method="post"> 
+				<div class="photoarea">
+					<div class="page-header">
+						<h1>Photo <small>enter required dimenstions and size below</small></h1>
+					</div>
+					<div style="position:relative;">
+						<a class='btn btn-primary' href='javascript:;'>
+							Choose File...
+							<input type="file" id="photo" name="photo"  style='position:absolute;z-index:2;top:0;left:0;filter: alpha(opacity=0);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";opacity:0;background-color:transparent;color:transparent;'   onchange='$("#upload-file-info1").html($(this).val());'>
+						</a>&nbsp;
+						<span class='label label-info' id="upload-file-info1"></span>
+					</div>
+					<div class="panel panel-danger gap">
+						<div class="panel-heading">
+							<h3 class="panel-title">Enter Dimensions</h3>
+						</div>
+						<div class="panel-body">
+							<label class="radio-inline">
+								<input id="ppx" type="radio" name="p_unit" value="p_px" checked>px
+							</label>
+							<label class="radio-inline">
+								<input id="pcm" type="radio" name="p_unit" value="p_cm">cm
+							</label>
+						</div>
+						<div class="panel-body">
+							<div class="input-group">
+								<span class="input-group-addon" id="basic-addon1">width</span>
+								<input type="number" step="0.1" class="form-control" id="pw" name="p_width" placeholder="Enter width" aria-describedby="basic-addon1">
+								<span class="input-group-addon ss"></span>
+							</div>
+						</div>
+						<div class="panel-body">
+							<div class="input-group">
+								<span class="input-group-addon" id="basic-addon1">height</span>
+								<input type="number" step="0.1" class="form-control" id="ph"  name="p_height" placeholder="Enter height" aria-describedby="basic-addon1">
+								<span class="input-group-addon ss"></span>
+							</div>
+						</div>
+					</div>	
+					<div class="panel panel-success gap">
+						<div class="panel-heading">
+							<h3 class="panel-title">Enter Output Size</h3>
+						</div>
+						<div class="panel-body">
+							<div class="input-group">
+								<span class="input-group-addon" id="basic-addon1">min</span>
+								<input type="number" step="0.1" class="form-control" id="p_min"  name="p_min" placeholder="Enter minimum size" aria-describedby="basic-addon1">
+								<span class="input-group-addon">kb</span>
+							</div>
+						</div>
+						<div class="panel-body">
+							<div class="input-group">
+								<span class="input-group-addon" id="basic-addon1">max</span>
+								<input type="number" step="0.1" class="form-control" id="p_max" name="p_max" placeholder="Enter maximum size" aria-describedby="basic-addon1">
+								<span class="input-group-addon">kb</span>
+							</div>
+						</div>
+					</div>	
+				</div>
+				<div class="signarea">
+					<div class="page-header">
+						<h1>Signature <small>enter required dimenstions and size below</small></h1>
+					</div>
+					<div style="position:relative;">
+						<a class='btn btn-primary' href='javascript:;'>
+							Choose File...
+							<input type="file" style='position:absolute;z-index:2;top:0;left:0;filter: alpha(opacity=0);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";opacity:0;background-color:transparent;color:transparent;' id="sign" name="sign" onchange='$("#upload-file-info2").html($(this).val());'>
+						</a>&nbsp;
+						<span class='label label-info' id="upload-file-info2"></span>
+					</div>
+
+					<div class="panel panel-danger gap">
+						<div class="panel-heading">
+							<h3 class="panel-title">Enter Dimensions</h3>
+						</div>
+							<input type="hidden"  name="s_unit">
+						<div class="panel-body">
+							<div class="input-group">
+								<span class="input-group-addon" id="basic-addon1">width</span>
+								<input type="number" step="0.1" class="form-control" id="sw" name="s_width" placeholder="Enter width" aria-describedby="basic-addon1">
+								<span class="input-group-addon ss"></span>
+							</div>
+						</div>
+						<div class="panel-body">
+							<div class="input-group">
+								<span class="input-group-addon" id="basic-addon1">height</span>
+								<input type="number" step="0.1" class="form-control" id="sh" name="s_height" placeholder="Enter height" aria-describedby="basic-addon1">
+								<span class="input-group-addon ss"></span>
+							</div>
+						</div>
+					</div>	
+					<div class="panel panel-success gap">
+						<div class="panel-heading">
+							<h3 class="panel-title">Enter Output Size</h3>
+						</div>
+						<div class="panel-body">
+							<div class="input-group">
+								<span class="input-group-addon" id="basic-addon1">min</span>
+								<input type="number" step="0.1" class="form-control" id="s_min" name="s_min" placeholder="Enter minimum size" aria-describedby="basic-addon1">
+								<span class="input-group-addon">kb</span>
+							</div>
+						</div>
+						<div class="panel-body">
+							<div class="input-group">
+								<span class="input-group-addon" id="basic-addon1">max</span>
+								<input type="number" step="0.1" class="form-control" id="s_max"  name="s_max" placeholder="Enter maximum size" aria-describedby="basic-addon1">
+								<span class="input-group-addon">kb</span>
+							</div>
+						</div>
+					</div>	
+				</div>
+				<div class="form-action text-center">
+					<button type="submit" id="rz" class="btn btn-success btn-lg" value="Resize">Resize</button>
+				</div>
+			</form>
+		</div>
+		<div class="gap gap1"></gap>
+        <nav class="navbar navbar-inverse navbar-fixed-bottom">
+            <div class="f">
+		<p class="text-muted text-center">Copyright &copy; 2016-<script>document.write((new Date()).getFullYear())</script> <a href="mailto:lalitmunne9@gmail.com">Lalit Munne</a></p>
+
+            </div>
+        </nav>
+	</body>
+<script>	
+		span = document.getElementsByClassName('ss');
+		ppx = document.getElementById('ppx');
+		pcm = document.getElementById('pcm');
+		pw = document.getElementById('pw');
+		ph = document.getElementById('ph');
+		var p_min = document.getElementById('p_min');
+		p_max = document.getElementById('p_max');
+		sw = document.getElementById('sw');
+		sh = document.getElementById('sh');
+		var s_min = document.getElementById('s_min');
+		s_max = document.getElementById('s_max');
+		photo = document.getElementById('photo');
+		sign = document.getElementById('sign');
+		
+		if(ppx.checked)
+			for (elem in span)
+				span[elem].innerText = " px"; 
+		else 
+			for (elem in span)
+				span[elem].innerText = " cm";
+
+
+		pcm.onclick = function() {
+		 	for (elem in span)
+		 		span[elem].innerText = " cm";
+		 }
+		 ppx.onclick = function() {
+		 	for (elem in span)
+		 		span[elem].innerText = " px";
+		 }
+		
+		$('#rz').on('click',function(){
+			if ($('input[name=p_unit]:checked').val() == "p_px")
+				$('input[name=s_unit]').val('s_px');
+			else
+				$('input[name=s_unit]').val('s_cm');
+		});
+		function showalert(elem, message, marg) {
+			$(elem).parent().after('<div id="alertdiv" class="alert alert-danger" style="margin:10px 0px -'+ marg +'px 0px"><a class="close" data-dismiss="alert">x</a><span>'+message+'</span></div>')
+			setTimeout(function() {
+				$("#alertdiv").remove();
+			}, 5000);
+		}
+		function filterNum(el) {
+			marg = 15;
+			id = el.id;
+			if (id.match('w') == null)
+				marg = 7;
+			val = el.value;
+			if (isNaN(val)) {
+				showalert(el,'<strong>Oh snap!</strong> Only numbers allowed.', marg);
+				el.value = '';
+			}
+		}
+		function minmax(el1, el2) {
+			if(parseInt(el1.value,10) <= parseInt(el2.value,10)) {
+				showalert(el1,'<strong>Oh snap!</strong> Only large number than min allowed.', 7);
+				el1.value = '';
+			}
+		}
+		pw.onblur = function() { filterNum(pw) };
+		ph.onblur = function() { filterNum(ph) };
+		p_min.onblur = function() { filterNum(p_min) };
+		p_max.onblur = function() { filterNum(p_max); minmax(p_max, p_min); };
+		sh.onblur = function() { filterNum(sh) };
+		sw.onblur = function() { filterNum(sw) }; 	 
+		s_min.onblur = function() { filterNum(s_min) };
+		s_max.onblur = function() { filterNum(s_max); minmax(s_max, s_min); };
+		if ($(document).height() > $(window).height()){
+                $(".gap1").append($(".f"));
+                $(".f").addClass('navbar navbar-inverse');
+                $(".f").css("marginBottom","0px");
+                $(".navbar-fixed-bottom").css('display','none');
+            }
+	</script>
+	<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	ga('create', 'UA-88916663-1', 'auto');
+	ga('send', 'pageview');
+	</script>
+</html>

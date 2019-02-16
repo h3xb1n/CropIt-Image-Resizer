@@ -1,0 +1,6 @@
+{
+    "require": {
+        "imagine/imagine": "^0.6.3",
+        "lsolesen/pel": "^0.9.4"
+    }
+}

@@ -1,0 +1,7 @@
+drwxr-xr-x    2 23340146   23340146         4096 Jan 23 14:11 .
+drwxr-xr-x    7 23340146   23340146         4096 Jan 23 14:11 ..
+-rw-r--r--    1 23340146   23340146         2523 Jan 23 14:11 AbstractMetadataReader.php
+-rw-r--r--    1 23340146   23340146          740 Jan 23 14:11 DefaultMetadataReader.php
+-rw-r--r--    1 23340146   23340146         2790 Jan 23 14:11 ExifMetadataReader.php
+-rw-r--r--    1 23340146   23340146         1815 Jan 23 14:11 MetadataBag.php
+-rw-r--r--    1 23340146   23340146         1088 Jan 23 14:11 MetadataReaderInterface.php

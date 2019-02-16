@@ -1,0 +1,10 @@
+drwxr-xr-x    2 23340146   23340146         4096 Jan 23 14:00 .
+drwxr-xr-x    5 23340146   23340146         4096 Jan 23 14:00 ..
+-rw-r--r--    1 23340146   23340146        12567 Jan 23 14:00 ClassLoader.php
+-rw-r--r--    1 23340146   23340146         1075 Jan 23 14:00 LICENSE
+-rw-r--r--    1 23340146   23340146          147 Jan 23 14:00 autoload_classmap.php
+-rw-r--r--    1 23340146   23340146          210 Jan 23 14:00 autoload_namespaces.php
+-rw-r--r--    1 23340146   23340146          209 Jan 23 14:00 autoload_psr4.php
+-rw-r--r--    1 23340146   23340146         1681 Jan 23 14:00 autoload_real.php
+-rw-r--r--    1 23340146   23340146         1157 Jan 23 14:00 autoload_static.php
+-rw-r--r--    1 23340146   23340146         3607 Jan 23 14:00 installed.json

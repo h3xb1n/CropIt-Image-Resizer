@@ -1,0 +1,7 @@
+drwxr-xr-x    4 23340146   23340146         4096 Jan 23 13:57 .
+drwxr-xr-x   11 23340146   23340146         4096 Jan 23 13:55 ..
+drwxr-xr-x    2 23340146   23340146         4096 Jan 23 13:57 Advanced
+drwxr-xr-x    2 23340146   23340146         4096 Jan 23 13:57 Basic
+-rw-r--r--    1 23340146   23340146          637 Jan 23 13:54 FilterInterface.php
+-rw-r--r--    1 23340146   23340146         1249 Jan 23 13:54 ImagineAware.php
+-rw-r--r--    1 23340146   23340146         5691 Jan 23 13:55 Transformation.php

@@ -1,0 +1,8 @@
+drwxr-xr-x    3 23340146   23340146         4096 Jan 23 14:16 .
+drwxr-xr-x    7 23340146   23340146         4096 Jan 23 14:11 ..
+-rw-r--r--    1 23340146   23340146         2905 Jan 23 14:11 CMYK.php
+drwxr-xr-x    2 23340146   23340146         4096 Jan 23 14:16 Color
+-rw-r--r--    1 23340146   23340146         4489 Jan 23 14:11 ColorParser.php
+-rw-r--r--    1 23340146   23340146         2816 Jan 23 14:11 Grayscale.php
+-rw-r--r--    1 23340146   23340146         2186 Jan 23 14:11 PaletteInterface.php
+-rw-r--r--    1 23340146   23340146         3165 Jan 23 14:11 RGB.php
